@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nofdev.Sample.Demo", "Nofdev.Sample.Demo\Nofdev.Sample.Demo.xproj", "{18004323-1D22-4EBC-BF80-AA64CCCC307D}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nofdev.Data", "..\src\Nofdev.Data\Nofdev.Data.xproj", "{FE153D3D-B609-4E1F-9562-FED4348A0FE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{18004323-1D22-4EBC-BF80-AA64CCCC307D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18004323-1D22-4EBC-BF80-AA64CCCC307D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18004323-1D22-4EBC-BF80-AA64CCCC307D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE153D3D-B609-4E1F-9562-FED4348A0FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE153D3D-B609-4E1F-9562-FED4348A0FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE153D3D-B609-4E1F-9562-FED4348A0FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE153D3D-B609-4E1F-9562-FED4348A0FE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +74,6 @@ Global
 		{7CE3E13D-A884-4E65-961F-04A87652151C} = {EF678017-E58C-42F5-B9A1-02B2CFC85A0B}
 		{3E01DC65-9B5C-45FC-BAC9-1AA4A56456B4} = {EF678017-E58C-42F5-B9A1-02B2CFC85A0B}
 		{E5727C21-0153-47C0-A5E2-E1BEEFC73EF1} = {EF678017-E58C-42F5-B9A1-02B2CFC85A0B}
+		{FE153D3D-B609-4E1F-9562-FED4348A0FE0} = {EF678017-E58C-42F5-B9A1-02B2CFC85A0B}
 	EndGlobalSection
 EndGlobal
