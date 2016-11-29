@@ -1,7 +1,6 @@
-﻿using Nofdev.Application.Services;
-using Nofdev.Dependency;
-using Castle.Core;
-using Castle.MicroKernel;
+﻿using Nofdev.Data.Dependency;
+using Nofdev.Data.Services;
+using System.Reflection;
 
 namespace Nofdev.Data.Validation.Interception
 {
@@ -12,6 +11,11 @@ namespace Nofdev.Data.Validation.Interception
             iocManager.IocContainer.Kernel.ComponentRegistered += Kernel_ComponentRegistered;
         }
 
+        /// <summary>
+        /// IHandler和InterceptorReference也是castleWindsor中的接口，该方法还未迁移到core中，有毒啊
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="handler"></param>
         private static void Kernel_ComponentRegistered(string key, IHandler handler)
         {
             if (typeof(IApplicationService).IsAssignableFrom(handler.ComponentModel.Implementation))

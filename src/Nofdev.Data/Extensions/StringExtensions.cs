@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// CultureInfo  此方法已经改的基本有毒了，如果出错了可以研究下转换类型时的CultureInfo，
+/// 目前core中没有支持这种转换方法
+/// </summary>
 namespace Nofdev.Data.Extensions
 {
     /// <summary>
@@ -29,7 +37,7 @@ namespace Nofdev.Data.Extensions
                 throw new ArgumentNullException("str");
             }
 
-            if (str.EndsWith(c.ToString(CultureInfo.InvariantCulture), comparisonType))
+            if (str.EndsWith(c.ToString()))
             {
                 return str;
             }
@@ -47,7 +55,7 @@ namespace Nofdev.Data.Extensions
                 throw new ArgumentNullException("str");
             }
 
-            if (str.EndsWith(c.ToString(culture), ignoreCase, culture))
+            if (str.EndsWith(c.ToString()))
             {
                 return str;
             }
@@ -73,7 +81,7 @@ namespace Nofdev.Data.Extensions
                 throw new ArgumentNullException("str");
             }
 
-            if (str.StartsWith(c.ToString(CultureInfo.InvariantCulture), comparisonType))
+            if (str.StartsWith(c.ToString()))
             {
                 return str;
             }
@@ -91,7 +99,7 @@ namespace Nofdev.Data.Extensions
                 throw new ArgumentNullException("str");
             }
 
-            if (str.StartsWith(c.ToString(culture), ignoreCase, culture))
+            if (str.StartsWith(c.ToString()))
             {
                 return str;
             }
@@ -308,10 +316,10 @@ namespace Nofdev.Data.Extensions
 
             if (str.Length == 1)
             {
-                return str.ToLower(culture);
+                return str.ToLower();
             }
 
-            return char.ToLower(str[0], culture) + str.Substring(1);
+            return char.ToLower(str[0]) + str.Substring(1);
         }
 
         /// <summary>
@@ -337,7 +345,7 @@ namespace Nofdev.Data.Extensions
                 return str;
             }
 
-            return Regex.Replace(str, "[a-z][A-Z]", m => m.Value[0] + " " + char.ToLower(m.Value[1], culture));
+            return Regex.Replace(str, "[a-z][A-Z]", m => m.Value[0] + " " + char.ToLower(m.Value[1]));
         }
 
         /// <summary>
@@ -417,10 +425,10 @@ namespace Nofdev.Data.Extensions
 
             if (str.Length == 1)
             {
-                return str.ToUpper(culture);
+                return str.ToUpper();
             }
 
-            return char.ToUpper(str[0], culture) + str.Substring(1);
+            return char.ToUpper(str[0]) + str.Substring(1);
         }
 
         /// <summary>

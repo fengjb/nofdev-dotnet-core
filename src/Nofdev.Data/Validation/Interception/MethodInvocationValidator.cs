@@ -1,3 +1,8 @@
+using Castle.Core.Internal;
+using Nofdev.Data.Dependency;
+using Nofdev.Data.Reflection;
+using Nofdev.Data.Startup;
+using Nofdev.Data.Xml;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,10 +10,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using Nofdev.Collections.Extensions;
-using Nofdev.Configuration.Startup;
-using Nofdev.Dependency;
-using Nofdev.Reflection;
 
 namespace Nofdev.Data.Validation.Interception
 {

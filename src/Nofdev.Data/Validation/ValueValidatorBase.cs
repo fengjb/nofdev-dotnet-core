@@ -1,8 +1,8 @@
+using Nofdev.Data.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Nofdev.Collections.Extensions;
 
 namespace Nofdev.Data.Validation
 {
@@ -14,9 +14,9 @@ namespace Nofdev.Data.Validation
             get
             {
                 var type = GetType();
-                if (type.IsDefined(typeof(ValidatorAttribute)))
+                if (type.GetTypeInfo().IsDefined(typeof(ValidatorAttribute)))
                 {
-                    return type.GetCustomAttributes(typeof(ValidatorAttribute)).Cast<ValidatorAttribute>().First().Name;
+                    return type.GetTypeInfo().GetCustomAttributes(typeof(ValidatorAttribute)).Cast<ValidatorAttribute>().First().Name;
                 }
 
                 return type.Name;

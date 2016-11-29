@@ -1,7 +1,9 @@
-﻿using Nofdev.Application.Services;
-using Nofdev.Aspects;
-using Nofdev.Dependency;
+﻿
+
 using Castle.DynamicProxy;
+using Nofdev.Data.Aspects;
+using Nofdev.Data.Dependency;
+
 
 namespace Nofdev.Data.Validation.Interception
 {
@@ -30,7 +32,7 @@ namespace Nofdev.Data.Validation.Interception
                 validator.Object.Initialize(invocation.Method, invocation.Arguments);
                 validator.Object.Validate();
             }
-            
+
             invocation.Proceed();
         }
     }

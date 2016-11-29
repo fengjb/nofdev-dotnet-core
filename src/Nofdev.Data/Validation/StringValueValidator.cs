@@ -1,7 +1,6 @@
 using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using Nofdev.Extensions;
 using Nofdev.Data.Extensions;
 
 namespace Nofdev.Data.Validation
@@ -13,7 +12,7 @@ namespace Nofdev.Data.Validation
         public bool AllowNull
         {
             get { return (this["AllowNull"] ?? "false").To<bool>(); }
-            set { this["AllowNull"] = value.ToString().ToLower(CultureInfo.InvariantCulture); }
+            set { this["AllowNull"] = value.ToString().ToLower(); }
         }
 
         public int MinLength
