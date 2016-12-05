@@ -1,6 +1,7 @@
 ﻿using Nofdev.Data.Dependency;
 using Nofdev.Data.Services;
 using System.Reflection;
+using Castle.Core;
 
 namespace Nofdev.Data.Validation.Interception
 {
